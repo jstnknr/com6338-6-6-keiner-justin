@@ -14,8 +14,7 @@ var hamburgerMenu = document.querySelector("ul")
 var main = document.querySelector('main')
 var foot = document.querySelector('footer')
 var hamburgerBtn = document.querySelector ("button.hamburger-btn")
-//section
-//banner
+var banner = document.querySelector ("div.banner")
 
 
 function openMenu(){
@@ -27,14 +26,36 @@ function openMenu(){
 }
 
 function closeMenu(){
-    hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
+    if (hamburgerBtn.aria-expanded == true) {
+        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
     hamburgerMenu.classList.add("hamburger-menu")
     hamburgerBtn.setAttribute('aria-expanded', false) 
+    }
     }
         
      
 
 hamburgerBtn.onclick = openMenu
+
+main.onclick = function() {
+    console.log ("wtfman")
+        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
+        hamburgerMenu.classList.add("hamburger-menu")
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+}
+foot.onclick = function() {
+    console.log ("wtfman")
+        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
+        hamburgerMenu.classList.add("hamburger-menu")
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+}
+
+banner.onclick = function() {
+    console.log ("wtfman")
+        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
+        hamburgerMenu.classList.add("hamburger-menu")
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+}
 
 //document.onkeyup = function(e) {
 //    if (e.key === 'Escape')
