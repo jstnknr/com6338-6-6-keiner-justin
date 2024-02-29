@@ -25,36 +25,34 @@ function openMenu(){
      
 }
 
-function closeMenu(){
-    if (hamburgerBtn.aria-expanded == true) {
-        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
-    hamburgerMenu.classList.add("hamburger-menu")
-    hamburgerBtn.setAttribute('aria-expanded', false) 
-    }
-    }
         
-     
+function closeMenu() {
+        console.log ("ftw!")
+        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
+        hamburgerMenu.classList.add("hamburger-menu")
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+}
+
+function keyPress (e) {
+    if(e.key === "H") {
+        console.log ("pretty pretty pretty good")
+}
+}
+
+document.onkeyup = keyPress
 
 hamburgerBtn.onclick = openMenu
 
-main.onclick = function() {
-    console.log ("wtfman")
-        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
-        hamburgerMenu.classList.add("hamburger-menu")
-        hamburgerBtn.setAttribute('aria-expanded', false) 
-}
-foot.onclick = function() {
-    console.log ("wtfman")
-        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
-        hamburgerMenu.classList.add("hamburger-menu")
-        hamburgerBtn.setAttribute('aria-expanded', false) 
-}
 
-banner.onclick = function() {
-    console.log ("wtfman")
-        hamburgerMenu.classList.remove('hamburger-menu.show-menu')    
-        hamburgerMenu.classList.add("hamburger-menu")
-        hamburgerBtn.setAttribute('aria-expanded', false) 
+main.onclick = closeMenu
+
+foot.onclick = closeMenu
+
+banner.onclick = closeMenu
+
+document.onkeyup = function(e) {
+    if (e.key === '4')
+     closeMenu
 }
 
 //document.onkeyup = function(e) {
